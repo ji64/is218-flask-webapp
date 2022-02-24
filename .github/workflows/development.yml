@@ -3,7 +3,7 @@ name: Run Tests, Build Dockerfile, Run on Heroku
 on:
   push:
     branches:
-      - 'master'
+      - 'development'
     tags:
       - 'v*'
   pull_request:
