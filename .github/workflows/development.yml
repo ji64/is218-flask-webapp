@@ -1,11 +1,6 @@
 name: Development Tests
 
 on:
-  push:
-    branches:
-      - 'development'
-    tags:
-      - 'v*'
   pull_request:
     branches:
       - 'master'
