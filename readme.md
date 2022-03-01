@@ -1,5 +1,5 @@
 # Calculator Project Setup
-[![Build Status](https://app.travis-ci.com/kaw393939/calc2.svg?branch=main)](https://app.travis-ci.com/kaw393939/calc2)
+[![Production Tests](https://github.com/ji64/is218-flask-webapp/actions/workflows/production.yml/badge.svg)](https://github.com/ji64/is218-flask-webapp/actions/workflows/production.yml)
 
 To run tests, Lint, and Coverage report use this command:
 
