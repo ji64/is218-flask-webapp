@@ -6,19 +6,32 @@
 
     <div>
         <div class="card">
-            <div class="card-header"><h4>Branches</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Containers</h4></div>
+            <div class="card-body">Containers are lightweight applications that can be run inside of docker which can be installed on almost any computer. The goal of a container is to be able to run exactly the same way on any machine. In order to do this a container is an abstraction at the application layer. This allows containers to share the same host os which for spinning containers up and down can be almost instantaneous compared to a virtual machine. </div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Merge</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Images</h4></div>
+            <div class="card-body">Images is the portable blueprint that when called will spin up a container with that exact configuration of software. The Image contains all the necessary files in order to run the container so once the image is downloaded it won't have to download or fetch other files.</div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Commit</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Commands</h4></div>
+            <div class="card-body">
+                <p><h5>Docker</h5></p>
+                <hr>
+                <p><code>docker ps</code> - shows the running docker containers</p>
+                <p><code>docker run [options] [image]</code> - creates a container from the image</p>
+                <p><code>docker start [container]</code> - starts an existing container</p>
+                <p><code>docker stop [container]</code> - stops an existing container</p>
+                <p><code>docker rm [container]</code> - removes a container</p>
+                <p><code>docker kill [container]</code> - forcefully stops a container</p>
+                <p><h5>Docker Compose</h5></p>
+                <hr>
+                <p><code>docker-compose up</code> - executes the <var>docker-compose.yml</var> in the current working directory</p>
+                <p><code>docker-compose down</code> - stops the containers associated with the <var>docker-compose.yml</var> file</p>
+            </div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Repositories</h4></div>
+            <div class="card-header"><h4>Docker and Pycharm</h4></div>
             <div class="card-body">Content</div>
         </div>
     </div>
