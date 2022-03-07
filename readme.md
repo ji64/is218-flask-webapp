@@ -1,4 +1,4 @@
-# Calculator Project Setup
+git remote show# Calculator Project Setup
 [![Production Tests](https://github.com/ji64/is218-flask-webapp/actions/workflows/production.yml/badge.svg)](https://github.com/ji64/is218-flask-webapp/actions/workflows/production.yml)
 
 To run tests, Lint, and Coverage report use this command:

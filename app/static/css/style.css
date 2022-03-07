@@ -19,3 +19,10 @@ body, html {
 .card {
     margin-top: 20px;
 }
+
+code{
+    color: black;
+    font-size: 100%;
+    background-color: #f1f1f1;
+    padding: 2px;
+}
