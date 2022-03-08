@@ -50,8 +50,8 @@
                                 <ul>
                                     <li>workflows
                                         <ul>
-                                            <li>development.yml</li>
-                                            <li>production.yml</li>
+                                            <li>development.yml - workflow file for triggering deployments of the development environment</li>
+                                            <li>production.yml - workflow file for triggering deployments of the production environment</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -62,74 +62,77 @@
                                         <ul>
                                             <li>templates
                                                 <ul>
-                                                    <li>index.html</li>
-                                                    <li>page1.html</li>
-                                                    <li>page2.html</li>
-                                                    <li>page3.html</li>
-                                                    <li>page4.html</li>
+                                                    <li>index.html - the default page of the website that is accessed</li>
+                                                    <li>page1.html - webpage about Git</li>
+                                                    <li>page2.html - webpage about Docker</li>
+                                                    <li>page3.html - webpage about Python / Flask</li>
+                                                    <li>page4.html - webpage about CI/CD</li>
                                                 </ul>
                                             </li>
-                                            <li>__init__.py</li>
+                                            <li>__init__.py - generates the HTML file being requested</li>
                                         </ul>
                                     </li>
                                     <li>static
                                         <ul>
                                             <li>css
                                                 <ul>
-                                                    <li>style.css</li>
+                                                    <li>style.css - style sheet for dictating how the webpage will look</li>
                                                 </ul>
                                             </li>
                                             <li>images
                                                 <ul>
-                                                    <li>sample.jpeg</li>
+                                                    <li>Proxmox.png</li>
+                                                    <li>MAAS.png</li>
+                                                    <li>Portainer.png</li>
+                                                    <li>Unifi.png</li>
                                                 </ul>
                                             </li>
                                             <li>js
                                                 <ul>
-                                                    <li>style.js</li>
+                                                    <li>style.js - file containing any javascript implemented on the page</li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>templates
                                         <ul>
-                                            <li>base.html</li>
+                                            <li>base.html - base HTML file which provides the initialization of bootstrap,the   navbar and the footer</li>
                                         </ul>
                                     </li>
-                                    <li>__init__.py</li>
-                                    <li>run.py</li>
+                                    <li>__init__.py - initializing flask</li>
+                                    <li>run.py - starting simple pages</li>
                                 </ul>
                             </li>
                             <li>calculator
                                 <ul>
                                     <li>operations
                                         <ul>
-                                            <li>__init__.py</li>
+                                            <li>__init__.py - holds operations for the Calculator project</li>
                                         </ul>
                                     </li>
-                                    <li>__inti__.py</li>
+                                    <li>__inti__.py - creates the calculator</li>
                                 </ul>
                             </li>
                             <li>tests
                                 <ul>
                                     <li>__init__.py</li>
-                                    <li>calculator_test.py</li>
-                                    <li>conftest.py</li>
-                                    <li>operations_test.py</li>
-                                    <li>simple_pages_test.py</li>
+                                    <li>calculator_test.py - calculator tests</li>
+                                    <li>conftest.py - checks if the app is running</li>
+                                    <li>operations_test.py - checks the operations for calculator</li>
+                                    <li>simple_pages_test.py - checks to see if webpages load</li>
                                 </ul>
                             </li>
-                            <li>.coveragerc</li>
-                            <li>.dockerignore</li>
-                            <li>.gitignore</li>
-                            <li>.pylintrc</li>
-                            <li>docker-compose.yml</li>
-                            <li>Dockerfile</li>
-                            <li>heroku.yml</li>
-                            <li>pytest.ini</li>
-                            <li>readme.md</li>
-                            <li>requirements.txt</li>
-                            <li>setup.py</li>
+                            <li>.coveragerc - config file for coverage</li>
+                            <li>.dockerignore - files docker should ignore</li>
+                            <li>.gitignore - files git should ignore</li>
+                            <li>.pylintrc - config file for pylint</li>
+                            <li>docker-compose.yml - Orchestration file that contains the configuration to develop locally, it overrides the Dockerfile to run the flask development server instead of running the gunicorn server that is used for hosting on Heroku</li>
+                            <li>Dockerfile - file used to create the docker image</li>
+                            <li>heroku.yml configuration for how heroku should run</li>
+                            <li>pytest.ini pytest config file</li>
+                            <li>readme.md - describes the project</li>
+                            <li>requirements.txt - used for building the docker image</li>
+                            <li>setup.py - used for building the docker image</li>
                         </ul>
                     </li>
                 </ul>

@@ -34,3 +34,7 @@ pre code {
   padding: 20px;
     border-radius: 5px;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon, .carousel-indicators  {
+    filter: invert(100%);
+}

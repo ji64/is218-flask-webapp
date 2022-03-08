@@ -3,18 +3,108 @@
 
     <!--<img src="https://i.imgur.com/NTxZhgr.jpg" alt="Picture of two Zambonis" class="img-fluid" style="background-attachment: fixed">-->
 
-    <div class="parallax"></div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/Proxmox.png') }}" alt="Proxmox" class="d-block" style="width:100%">
+                <div class="carousel-caption text-black">
+                    <h3>Proxmox</h3>
+                    <p>An open source hypervisor</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/MAAS.png') }}" alt="MAAS" class="d-block" style="width:100%">
+                <div class="carousel-caption text-black">
+                    <h3>MAAS</h3>
+                    <p>Automatically deploy fully configured OS's</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/Portainer.png') }}" alt="portainer" class="d-block" style="width:100%">
+                <div class="carousel-caption text-black">
+                    <h3>Portainer</h3>
+                    <p>Docker web interface Manager</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/Unifi.png') }}" alt="Unifi" class="d-block" style="width:100%">
+                <div class="carousel-caption text-black">
+                    <h3>Unifi</h3>
+                    <p>Software controller for Unifi network hardware</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
     <div class="container-fluid" style="padding: 100px 50px">
         <div class="row">
             <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class="card">
+                    <div class="card-header"><h4>Proxmox</h4></div>
+                    <div class="card-body">
+                        <p>Proxmox is an open source hypervisor. Proxmox allows for the easy creation and management of virtual machines. Proxmox allows for creating both virtual machines and containers. Proxmox gives the ability to create VMs with any hardware configuration and emulation type. It also has more advanced features such PCI and PCIe passthrough which allows a virtual machine to take full control of the device passed. Proxmox has a built-in VNC viewer in order to view the VM as if it were its actual monitor. Other features include backup scheduling, HA clustering, and Ceph storage clustering.</p>
+
+                        <div class="d-flex justify-content-center">
+                            <a href="https://www.proxmox.com/en/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Proxmox</button></a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class="card">
+                    <div class="card-header"><h4>MAAS</h4></div>
+                    <div class="card-body">
+                        <p>MAAS or Metal as a Service, is software made by Canonical (Developers of Ubuntu). MAAS allows for the adoption of hardware by inputting systems using their MAC address and selecting power type. This software is ment to be used with datacenter server hardware which has IPMI. IPMI allows for control of the server even if the server is turned off. This can be used to remotely turn on the server and monitor its statics. Once a machine is added into MAAS it will automatically turn the computer on and perform its tests using PxE booting. PxE booting is where the operating system is handed out over the LAN and installed. Once the computer is done running its tests the computer will then sit ready to be deployed. Once deployed the server will once again PxE boot and this time install the operating system chosen by the admin. In order for MAAS to work it needs to be the DHCP server for the network. It can also act as a local DNS server allowing each machine to have its on FQDN. </p>
+
+                        <div class="d-flex justify-content-center">
+                            <a href="https://maas.io/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">MAAS</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header"><h4>Portainer</h4></div>
+                    <div class="card-body">
+                        <p>Portainer is a docker container that allows for the easy administration of docker machines or clusters. Portainer can allow for multiple different administrators to manage the environments with different levels of permission. Portainer can allow for the advanced customization of docker environments with the ability to deploy prepackaged apps that only need a few items entered for configuration. Portainer allows for the easy access of logs of the containers and the ability to download them</p>
+
+                        <div class="d-flex justify-content-center">
+                            <a href="https://www.portainer.io/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Portainer</button></a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class="card">
+                    <div class="card-header"><h4>Unifi</h4></div>
+                    <div class="card-body">
+                        <p>Unifi is a software network controller that allows for the administration of its hardware. Unifi is a relatively new company compared to the likes of Cisco, Juniper, MikroTIk, and TP-Link. Unifi allows users to host its network controller for free. The network controller is required to be able to manage Unifi's devices. Unifi does its network managing differently as it is mostly software defined networking. Setting up networks and vlans is as simple as following the setup wizards. </p>
+
+                        <div class="d-flex justify-content-center">
+                            <a href="https://www.ui.com/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Unifi</button></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
