@@ -7,19 +7,45 @@
     <div>
         <div class="card">
             <div class="card-header"><h4>Branches</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-body">
+                <p>Branches allow others to be able to edit files from the master branch and be able to push them to their branch without affecting the master branch. Once ready a user can create a pull request and eventually merge their branch to the master branch.</p>
+
+                <p>A new branch can be created with <code>git checkout -b [new branch]</code> or <code>git switch -c [new branch]</code></p>
+
+                <p>To switch between branches use <code>git checkout [branch name]</code> or <code>git switch [branch name]</code></p>
+            </div>
         </div>
         <div class="card">
             <div class="card-header"><h4>Merge</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-body">
+                <p>Merging allows a user to combine two branches together. This is typically done when a new feature or hotfix has been developed and tested and now needs to be pushed to the master branch. Merging without testing can be dangerous as if someone's code that was not tested gives an error now everyone who has updated to the master branch needs to revert their code back, which is not as easy as it sounds.</p>
+
+                <p>To merge two branches use <code>git merge [branch name]</code> or use the GitHub webpage to create a pull request to start a merge </p>
+            </div>
         </div>
         <div class="card">
             <div class="card-header"><h4>Commit</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-body">
+                <p>Committing allows users to upload all of their file changes in order to keep track of what lines of text or code are added or removed and which files were created or deleted. Committing is like taking a snapshot of where the project is at that exact moment in time.</p>
+
+                <p>In order to commit you must add the files to be staged by git. Use <code>git add .</code> to add all files in the current directory. Also <code>git add *</code> can be used to add only files that have been changed in the current directory. <code>git add [filename]</code> to only add a specific file.</p>
+
+                <p>Once the files have been staged use <code>git commit -m "[message]"</code></p>
+
+                <p>After committing the files use <code>git push origin [branch]</code> to push the change to GitHub which will allow others to see the changes</p>
+            </div>
         </div>
         <div class="card">
             <div class="card-header"><h4>Repositories</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-body">
+                <p>A repository is the location where the code is stored. The user needs to push committed changes in order for the code base to be updated. The repository is also responsible for knowing what branches have been committed and how to merge those branches when requested. </p>
+
+                <p>To create a repository first in the directory which the project will be stored in do <code>git init</code> which will initialize a new repository.</p>
+
+                <p>Next to link it to GitHub first on the webpage login and create a new repository. Once created a link inorder to push to the repository can be added by doing <code>git remote add origin https://github.com/username/new_repo</code></p>
+
+                <p>After adding the remote link to the repository it is recommended to do your first commit to upload all the initial files. Use <code>git add .</code> to add all files in the directory then commit it with <code>git commit -m "initial commit"</code> then push it with <code>git push origin master</code></p>
+            </div>
         </div>
     </div>
 </div>

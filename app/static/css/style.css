@@ -1,5 +1,5 @@
 body, html {
-    height: 100vh;
+    /*height: 100%;*/
 }
 
 .parallax {
@@ -18,4 +18,19 @@ body, html {
 
 .card {
     margin-top: 20px;
+}
+
+code{
+    color: black;
+    font-size: 100%;
+    background-color: #f1f1f1;
+    padding: 2px;
+}
+
+pre code {
+  background-color: #f1f1f1;
+  border: 1px solid #eee;
+  display: block;
+  padding: 20px;
+    border-radius: 5px;
 }
