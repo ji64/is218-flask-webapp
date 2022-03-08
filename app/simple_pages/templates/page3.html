@@ -6,20 +6,134 @@
 
     <div>
         <div class="card">
-            <div class="card-header"><h4>Branches</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Testing with Pytest</h4></div>
+            <div class="card-body">
+                <p>Testing with Pytest is very useful to make sure that components did not break and that everything is working as intended. In order to run the test open up a terminal inside the container and execute <code>pytest -vv</code> this will run all tests created in the <var>tests</var> folder inside the project.</p>
+
+                <p>To test that each page is accessible this test is executed to make sure its accessible and has the Section title on there. Here is an example of that such test for the Git page.</p>
+
+                <pre><code>def test_request_page1(client):
+    """This checks page 1"""
+    response = client.get("/page1")
+    assert response.status_code == 200
+    assert b"Git" in response.data</code></pre>
+            </div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Merge</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Simple Pages</h4></div>
+            <div class="card-body">
+                <p>Using Simple Pages allows creating a base HTML file which have the navbar and footer then the different content pages are put in the middle allowing for a uniform page look without having to copy and paste code everywhere. It makes editing the navbar easy instead of having to change every file, only one file needs to be changed which is the file that has the HTML for it.</p>
+
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <a href="https://github.com/ji64/is218-flask-webapp" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">GitHub</button></a>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Flask</button></a>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Flask Blueprint</button></a>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <a href="https://flask.palletsprojects.com/en/2.0.x/testing/" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Flask Testing With Pytest</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Commit</h4></div>
-            <div class="card-body">Content</div>
-        </div>
-        <div class="card">
-            <div class="card-header"><h4>Repositories</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Project Outline</h4></div>
+            <div class="card-body">
+                <ul>
+                    <li>Root Folder
+                        <ul>
+                            <li>.github
+                                <ul>
+                                    <li>workflows
+                                        <ul>
+                                            <li>development.yml</li>
+                                            <li>production.yml</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>app
+                                <ul>
+                                    <li>simple_pages
+                                        <ul>
+                                            <li>templates
+                                                <ul>
+                                                    <li>index.html</li>
+                                                    <li>page1.html</li>
+                                                    <li>page2.html</li>
+                                                    <li>page3.html</li>
+                                                    <li>page4.html</li>
+                                                </ul>
+                                            </li>
+                                            <li>__init__.py</li>
+                                        </ul>
+                                    </li>
+                                    <li>static
+                                        <ul>
+                                            <li>css
+                                                <ul>
+                                                    <li>style.css</li>
+                                                </ul>
+                                            </li>
+                                            <li>images
+                                                <ul>
+                                                    <li>sample.jpeg</li>
+                                                </ul>
+                                            </li>
+                                            <li>js
+                                                <ul>
+                                                    <li>style.js</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>templates
+                                        <ul>
+                                            <li>base.html</li>
+                                        </ul>
+                                    </li>
+                                    <li>__init__.py</li>
+                                    <li>run.py</li>
+                                </ul>
+                            </li>
+                            <li>calculator
+                                <ul>
+                                    <li>operations
+                                        <ul>
+                                            <li>__init__.py</li>
+                                        </ul>
+                                    </li>
+                                    <li>__inti__.py</li>
+                                </ul>
+                            </li>
+                            <li>tests
+                                <ul>
+                                    <li>__init__.py</li>
+                                    <li>calculator_test.py</li>
+                                    <li>conftest.py</li>
+                                    <li>operations_test.py</li>
+                                    <li>simple_pages_test.py</li>
+                                </ul>
+                            </li>
+                            <li>.coveragerc</li>
+                            <li>.dockerignore</li>
+                            <li>.gitignore</li>
+                            <li>.pylintrc</li>
+                            <li>docker-compose.yml</li>
+                            <li>Dockerfile</li>
+                            <li>heroku.yml</li>
+                            <li>pytest.ini</li>
+                            <li>readme.md</li>
+                            <li>requirements.txt</li>
+                            <li>setup.py</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

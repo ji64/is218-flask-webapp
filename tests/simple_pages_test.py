@@ -16,25 +16,25 @@ def test_request_index(client):
     assert b"Lorem" in response.data
 
 def test_request_page1(client):
-    """This makes the index page"""
+    """This checks page 1"""
     response = client.get("/page1")
     assert response.status_code == 200
     assert b"Git" in response.data
 
 def test_request_page2(client):
-    """This makes the index page"""
+    """This checks page 2"""
     response = client.get("/page2")
     assert response.status_code == 200
     assert b"Docker" in response.data
 
 def test_request_page3(client):
-    """This makes the index page"""
+    """This checks page 3"""
     response = client.get("/page3")
     assert response.status_code == 200
     assert b"Python / Flask" in response.data
 
 def test_request_page4(client):
-    """This makes the index page"""
+    """This checks page 4"""
     response = client.get("/page4")
     assert response.status_code == 200
     assert b"Continuous Integration and Deployment" in response.data
