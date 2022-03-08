@@ -6,20 +6,22 @@
 
     <div>
         <div class="card">
-            <div class="card-header"><h4>Branches</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>GitHub Actions</h4></div>
+            <div class="card-body">
+                <p>GitHub Actions allow workflows to be triggered on an event such as a push, pull request, or issue. In this project GitHub Actions are used to generate a new developmental docker image then pushes it to the developmental site which can be accessed to show that the site works and is operational. </p>
+            </div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Merge</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Multiple Servers</h4></div>
+            <div class="card-body">
+                <p>Multiple servers can be used for having a testing environment and a production environment. The purpose of having multiple environments is to prevent bad code that would cause the production server to stop and not be available. Testing on a developmental server is ideal to iron out the bugs before pushing the code to production.</p>
+            </div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Commit</h4></div>
-            <div class="card-body">Content</div>
-        </div>
-        <div class="card">
-            <div class="card-header"><h4>Repositories</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Deploying to DockerHub</h4></div>
+            <div class="card-body">
+                <p>In this project, an image is deployed to <var>ji64/is218-flask-webapp-dev</var> for any development branch pushes to ensure that the project can be complied into a docker image and then is deployed to the developmental heroku. On a merge the production workflow will be called where it will then create the production docker image an d push it to the production server</p>
+            </div>
         </div>
     </div>
 </div>
