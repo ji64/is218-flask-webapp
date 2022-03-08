@@ -11,7 +11,18 @@
         </div>
         <div class="card">
             <div class="card-header"><h4>Images</h4></div>
-            <div class="card-body">Images is the portable blueprint that when called will spin up a container with that exact configuration of software. The Image contains all the necessary files in order to run the container so once the image is downloaded it won't have to download or fetch other files.</div>
+            <div class="card-body">
+                <p>Images is the portable blueprint that when called will spin up a container with that exact configuration of software. The Image contains all the necessary files in order to run the container so once the image is downloaded it won't have to download or fetch other files.</p>
+
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <a href="https://hub.docker.com/repository/docker/ji64/is218-flask-webapp" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Production Image</button></a>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <a href="https://hub.docker.com/repository/docker/ji64/is218-flask-webapp-dev" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-primary">Development Image</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="card">
             <div class="card-header"><h4>Commands</h4></div>
@@ -24,6 +35,7 @@
                 <p><code>docker stop [container]</code> - stops an existing container</p>
                 <p><code>docker rm [container]</code> - removes a container</p>
                 <p><code>docker kill [container]</code> - forcefully stops a container</p>
+                <p><code>docker exec [options] [container] [command]</code> - execute a command on the container</p>
                 <p><h5>Docker Compose</h5></p>
                 <hr>
                 <p><code>docker-compose up</code> - executes the <var>docker-compose.yml</var> in the current working directory</p>
@@ -31,8 +43,12 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header"><h4>Docker and Pycharm</h4></div>
-            <div class="card-body">Content</div>
+            <div class="card-header"><h4>Starting Docker via CLI</h4></div>
+            <div class="card-body">
+                <p>To start the container first in the terminal navigate to the project folder where the <var>docker-compose.yml</var> file is located.</p>
+                <p>Next use <code>docker-compose up --build -d</code> to build and start the container</p>
+                <p>To get into the container and access its CLI use <code>docker ps</code> to get the containers ID. Then use <code>docker exec -it [container ID] /bin/bash</code> to get access to the terminal.</p>
+            </div>
         </div>
     </div>
 </div>
