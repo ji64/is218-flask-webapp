@@ -8,6 +8,10 @@ def test_request_main_menu_links(client):
     assert b'<a class="nav-link active" href="/page2">Docker</a>' in response.data
     assert b'<a class="nav-link active" href="/page3">Python</a>' in response.data
     assert b'<a class="nav-link active" href="/page4">CI/CD</a>' in response.data
+    assert b'<a class="nav-link active" href="/page5">OOP Glossary</a>' in response.data
+    assert b'<a class="nav-link active" href="/page6">AAA</a>' in response.data
+    assert b'<a class="nav-link active" href="/page7">Principles</a>' in response.data
+    assert b'<a class="nav-link active" href="/page8">SOLID</a>' in response.data
 
 def test_request_index(client):
     """This makes the index page"""
@@ -41,6 +45,6 @@ def test_request_page4(client):
 
 def test_request_page_not_found(client):
     """This makes the index page"""
-    response = client.get("/page5")
+    response = client.get("/page10")
     assert response.status_code == 404
 
