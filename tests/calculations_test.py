@@ -4,7 +4,7 @@ from calculator.calculations import Addition, Subtraction, Multiplication
 
 
 def test_calculation_multiplication_instance():
-    """Testing the Calculator Subtract"""
+    """Testing the Calculator Multiplication"""
     tuple_list = (1, 2)
     calculation = Multiplication.create(tuple_list)
     assert isinstance(calculation, Multiplication)

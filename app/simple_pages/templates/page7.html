@@ -1,4 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container" style="padding-top: 20px">
+    <h1>OOPs</h1>
+    <hr>
 
+    <div>
+        <div class="card">
+            <div class="card-header"><h4>Encapsulation</h4></div>
+            <div class="card-body">
+                <p>An example of encapsulation in this project is the add method for the calculator. When <code>Calculator.add(1.0,2)</code> is called it will then call the addition class with <code>calculation = Addition.create(tuple_list)</code> from this it will call <code>Add.add()</code> where this will finally add two numbers. It will return the result cause all the previous function calls to return all the way back up the first function call which will give back the result.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h4>Inheritance</h4></div>
+            <div class="card-body">
+                <p>Inheritance is used in the Calculation class. When for example the Addition class is created with <code>Addition.create(tuple_list)</code> it first calls the Calculation class which will take the tuple and convert all of its items into floats and put it into a new tuple which is stored in the Calculation class. The Addition class then is created as a child of the Calculation class which allows it to inherit the tuple of floats, so it can be used to add all the items in the tuple together.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h4>Polymorphism</h4></div>
+            <div class="card-body">
+                <p></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h4>Abstraction</h4></div>
+            <div class="card-body">
+                <p>text</p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
