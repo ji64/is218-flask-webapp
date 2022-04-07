@@ -30,13 +30,15 @@
             <div class="card-header"><h4>Interface Segregation</h4></div>
             <div class="card-body">
                 <p>A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.</p>
+                <p>For the calculations class it uses this principle by making it calculation type its on object therefore not requiring the other types to unnecessarily have the other types which it won't ever use.</p>
+
             </div>
         </div>
         <div class="card">
             <div class="card-header"><h4>Dependency Inversion</h4></div>
             <div class="card-body">
                 <p>Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.</p>
-                <p>The </p>
+                <p>The calculation classes show dependency inversion by instead of relying on just performing the operations there it calls another method to perform the actual calculations.</p>
             </div>
         </div>
     </div>
