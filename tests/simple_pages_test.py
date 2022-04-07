@@ -43,6 +43,30 @@ def test_request_page4(client):
     assert response.status_code == 200
     assert b"Continuous Integration and Deployment" in response.data
 
+def test_request_page5(client):
+    """This checks page 5"""
+    response = client.get("/page5")
+    assert response.status_code == 200
+    assert b"OOP Glossary" in response.data
+
+def test_request_page6(client):
+    """This checks page 6"""
+    response = client.get("/page6")
+    assert response.status_code == 200
+    assert b"Arrange-Act-Assert Testing" in response.data
+
+def test_request_page7(client):
+    """This checks page 7"""
+    response = client.get("/page7")
+    assert response.status_code == 200
+    assert b"OOPs" in response.data
+
+def test_request_page8(client):
+    """This checks page 8"""
+    response = client.get("/page8")
+    assert response.status_code == 200
+    assert b"SOLID" in response.data
+
 def test_request_page_not_found(client):
     """This makes the index page"""
     response = client.get("/page10")
