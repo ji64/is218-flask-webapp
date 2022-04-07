@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="padding-top: 20px">
+    <h1>Arrange-Act-Assert Testing</h1>
+    <hr>
+
+    <div>
+        <div class="card">
+            <div class="card-header"><h4>What is Arrange-Act-Assert?</h4></div>
+            <div class="card-body">
+                <p>Arrange-Act-Assert (AAA) is a format for laying out tests. Using this testing format all tests are focused around a single action. This testing design ensure that every action is tested individually making debugging easier if a problem occurs</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h4>How to use AAA testing</h4></div>
+            <div class="card-body">
+                <p>This test for testing the creation of the multiplication instance shows the principles of AAA.</p>
+                <pre><code>def test_calculation_multiplication_instance():
+    """Testing the Calculator Multiplication"""
+    tuple_list = (1, 2)
+    calculation = Multiplication.create(tuple_list)
+    assert isinstance(calculation, Multiplication)</code></pre>
+                <p>The first line, <code>def test_calculation_multiplication_instance():</code> is the definition of the test. This creates the test and allows the test to be called.</p>
+                <p>The second line, <code>"""Testing the Calculator Multiplication"""</code> is the docstring for the test which is used to describe what the test is ment to accomplish.</p>
+                <p>The third line, <code>tuple_list = (1, 2)</code> is the arrangement. This is where the necessary setup for the test is done.</p>
+                <p>The fourth line, <code>calculation = Multiplication.create(tuple_list)</code> is the action. This is the action that is being tested.</p>
+                <p>The fifth line, <code> assert isinstance(calculation, Multiplication)</code> is the assertion. This is where the output of the action is checked to assert whether the code return the correct output.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
